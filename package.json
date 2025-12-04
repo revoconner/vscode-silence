@@ -1,0 +1,46 @@
+{
+    "name": "silence-vscode",
+    "displayName": "Silence Vscode",
+    "description": "Shuts up vscode bloatware suggestions and autocomplete for c, cpp, cobol, fortran, js, python, ts, html, css. asm and lisp family",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.85.0"
+    },
+    "author": {
+    "name": "Rev"
+    },
+    "license": "unlicensed",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/revoconner/silence-vscode"
+    },
+    "categories": ["Other"],
+    "activationEvents": [],
+    "main": "./out/extension.js",
+    "contributes": {
+    "commands": [
+      {
+        "command": "silence.disable",
+        "title": "Silence: Disable All Suggestions"
+      },
+      {
+        "command": "silence.enable",
+        "title": "Silence: Enable All Suggestions"
+      },
+      {
+        "command": "silence.toggle",
+        "title": "Silence: Toggle Suggestions"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}
